@@ -1,5 +1,5 @@
-CMakeFiles/snakeGL.dir/main.cpp.o: \
-  /Users/adam/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev\ projects/snakeGL2.0/main.cpp \
+CMakeFiles/snakeGL.dir/src/main.cpp.o: \
+  /Users/adam/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev\ projects/snakeGL2.0/src/main.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__assertion_handler \
@@ -972,8 +972,6 @@ CMakeFiles/snakeGL.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__chrono/year_month_weekday.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__chrono/literals.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/forward_list \
-  /opt/homebrew/include/GLFW/glfw3.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gltypes.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/os/availability.h
+  /Users/adam/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev\ projects/snakeGL2.0/include/glad/glad.h \
+  /Users/adam/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev\ projects/snakeGL2.0/include/KHR/khrplatform.h \
+  /Users/adam/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev\ projects/snakeGL2.0/include/GLFW/glfw3.h

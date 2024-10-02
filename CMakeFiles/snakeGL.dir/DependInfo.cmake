@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/main.cpp" "CMakeFiles/snakeGL.dir/main.cpp.o" "gcc" "CMakeFiles/snakeGL.dir/main.cpp.o.d"
+  "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/src/glad.c" "CMakeFiles/snakeGL.dir/src/glad.c.o" "gcc" "CMakeFiles/snakeGL.dir/src/glad.c.o.d"
+  "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/src/main.cpp" "CMakeFiles/snakeGL.dir/src/main.cpp.o" "gcc" "CMakeFiles/snakeGL.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
