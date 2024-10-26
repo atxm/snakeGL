@@ -13,4 +13,6 @@ file(GLOB SOURCES "src/*.cpp" "src/*.c")
 
 add_executable(snakeGL ${SOURCES})
 
-target_link_libraries(snakeGL glfw)
+link_directories(${PROJECT_BINARY_DIR}/lib)
+
+target_link_libraries(snakeGL PRIVATE glfw)
