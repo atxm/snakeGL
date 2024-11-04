@@ -1,6 +1,0 @@
-.gitignore
-.DS_Store
-snakeGL
-.vscode/
-cmake_install.cmake
-Makefile
