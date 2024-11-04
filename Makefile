@@ -129,6 +129,54 @@ snakeGL/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/build
 .PHONY : snakeGL/fast
 
+src/Program.o: src/Program.cpp.o
+.PHONY : src/Program.o
+
+# target to build an object file
+src/Program.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/src/Program.cpp.o
+.PHONY : src/Program.cpp.o
+
+src/Program.i: src/Program.cpp.i
+.PHONY : src/Program.i
+
+# target to preprocess a source file
+src/Program.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/src/Program.cpp.i
+.PHONY : src/Program.cpp.i
+
+src/Program.s: src/Program.cpp.s
+.PHONY : src/Program.s
+
+# target to generate assembly for a file
+src/Program.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/src/Program.cpp.s
+.PHONY : src/Program.cpp.s
+
+src/Shader.o: src/Shader.cpp.o
+.PHONY : src/Shader.o
+
+# target to build an object file
+src/Shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/src/Shader.cpp.o
+.PHONY : src/Shader.cpp.o
+
+src/Shader.i: src/Shader.cpp.i
+.PHONY : src/Shader.i
+
+# target to preprocess a source file
+src/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/src/Shader.cpp.i
+.PHONY : src/Shader.cpp.i
+
+src/Shader.s: src/Shader.cpp.s
+.PHONY : src/Shader.s
+
+# target to generate assembly for a file
+src/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/src/Shader.cpp.s
+.PHONY : src/Shader.cpp.s
+
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
 
@@ -186,6 +234,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... snakeGL"
+	@echo "... src/Program.o"
+	@echo "... src/Program.i"
+	@echo "... src/Program.s"
+	@echo "... src/Shader.o"
+	@echo "... src/Shader.i"
+	@echo "... src/Shader.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

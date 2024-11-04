@@ -1,22 +1,31 @@
+#include <iostream>
 #include <string>
-#include "glad.h"
+#include "glad/glad.h"
+
+#ifndef SHADER_HPP
+#define SHADER_HPP
 
 // The Shader object is to be instantiated prior to its use
 
-enum SHADER_TYPE { UNDEFINED, VERTEX, FRAGMENT, GEOMETRY, COMPUTE };
+enum SHADER_TYPE { UNDEFINED, VERTEX, FRAGMENT, GEOMETRY };
 
 class Shader
 {
     private:
         SHADER_TYPE type;
+        GLenum GLtype;
+        int shaderID;
         std::string code;
-        std::string infoLog;
+        char infoLog[512];
     public:
         Shader();
-        Shader(const SHADER_TYPE type, const std::string& code) : type(type), code(code) {};
-        ~Shader();
-        SHADER_TYPE getShaderType() { return this->type; }
+        ~Shader() { glDeleteShader(this->getShaderID()); }
+        Shader(const SHADER_TYPE type, const std::string& code);
+        int getShaderID() { return this->shaderID; }
         void setShaderType(SHADER_TYPE newType) { this->type = newType; }
-        std::string get;
+        SHADER_TYPE getShaderType() { return this->type; }
+        GLenum getShaderGLType() { return this->GLtype; }
         void initializeShader();
 };
+
+#endif

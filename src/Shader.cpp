@@ -2,23 +2,35 @@
 
 void Shader::initializeShader()
 {
+    const char * source = (this->code).c_str();
+    this->shaderID = glCreateShader(this->getShaderGLType());
+    glShaderSource(this->shaderID, 1, &source, NULL);
+    glCompileShader(this->shaderID);
+    int success;
+    glGetShaderiv(this->shaderID, GL_COMPILE_STATUS, &success);
+    if (!success)
+    {
+        glGetShaderInfoLog(this->shaderID, 512, NULL, this->infoLog);
+        std::cout << "ERROR::SHADER::";
+        switch (this->type)
+        {
+            case UNDEFINED: std::cout << "UNDEFINED"; break;
+            case VERTEX:    std::cout << "VERTEX";    break;
+            case FRAGMENT:  std::cout << "FRAGMENT";  break;
+            case GEOMETRY:  std::cout << "GEOMETRY";  break;
+        }
+        std::cout << "::COMPILATION_FAILED\n" << this->infoLog << std::endl;
+    }
     
 }
 
-/*           the process of developing a vertex shader:
-
-    std::string vertexShaderSource = read("src/vertexShader.glsl");
-    unsigned int vertexShaderID = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShaderID, 1, &vertexShaderSource, NULL);
-    glCompileShader(vertexShaderID);
-    int  vertexSuccess;
-    char infoLog[512];
-    glGetShaderiv(vertexShaderID, GL_COMPILE_STATUS, &vertexSuccess);
-    if (!vertexSuccess)
+Shader::Shader(const SHADER_TYPE type, const std::string& code) : type(type), code(code)
+{
+    switch(type)
     {
-        glGetShaderInfoLog(vertexShaderID, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+        case UNDEFINED: this->GLtype = 0;                  break;
+        case VERTEX:    this->GLtype = GL_VERTEX_SHADER;   break;
+        case FRAGMENT:  this->GLtype = GL_FRAGMENT_SHADER; break;
+        case GEOMETRY:  this->GLtype = GL_GEOMETRY_SHADER; break;
     }
-*/
-
-// convert the code to a const char * within the class and call glShaderSource() within the initializeShader() member function for vtxShader
+}

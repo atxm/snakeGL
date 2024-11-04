@@ -69,10 +69,38 @@ include CMakeFiles/snakeGL.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/snakeGL.dir/flags.make
 
+CMakeFiles/snakeGL.dir/src/Program.cpp.o: CMakeFiles/snakeGL.dir/flags.make
+CMakeFiles/snakeGL.dir/src/Program.cpp.o: src/Program.cpp
+CMakeFiles/snakeGL.dir/src/Program.cpp.o: CMakeFiles/snakeGL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/snakeGL.dir/src/Program.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snakeGL.dir/src/Program.cpp.o -MF CMakeFiles/snakeGL.dir/src/Program.cpp.o.d -o CMakeFiles/snakeGL.dir/src/Program.cpp.o -c "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/src/Program.cpp"
+
+CMakeFiles/snakeGL.dir/src/Program.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snakeGL.dir/src/Program.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/src/Program.cpp" > CMakeFiles/snakeGL.dir/src/Program.cpp.i
+
+CMakeFiles/snakeGL.dir/src/Program.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snakeGL.dir/src/Program.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/src/Program.cpp" -o CMakeFiles/snakeGL.dir/src/Program.cpp.s
+
+CMakeFiles/snakeGL.dir/src/Shader.cpp.o: CMakeFiles/snakeGL.dir/flags.make
+CMakeFiles/snakeGL.dir/src/Shader.cpp.o: src/Shader.cpp
+CMakeFiles/snakeGL.dir/src/Shader.cpp.o: CMakeFiles/snakeGL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/snakeGL.dir/src/Shader.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snakeGL.dir/src/Shader.cpp.o -MF CMakeFiles/snakeGL.dir/src/Shader.cpp.o.d -o CMakeFiles/snakeGL.dir/src/Shader.cpp.o -c "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/src/Shader.cpp"
+
+CMakeFiles/snakeGL.dir/src/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snakeGL.dir/src/Shader.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/src/Shader.cpp" > CMakeFiles/snakeGL.dir/src/Shader.cpp.i
+
+CMakeFiles/snakeGL.dir/src/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snakeGL.dir/src/Shader.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/src/Shader.cpp" -o CMakeFiles/snakeGL.dir/src/Shader.cpp.s
+
 CMakeFiles/snakeGL.dir/src/glad.c.o: CMakeFiles/snakeGL.dir/flags.make
 CMakeFiles/snakeGL.dir/src/glad.c.o: src/glad.c
 CMakeFiles/snakeGL.dir/src/glad.c.o: CMakeFiles/snakeGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/snakeGL.dir/src/glad.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/snakeGL.dir/src/glad.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snakeGL.dir/src/glad.c.o -MF CMakeFiles/snakeGL.dir/src/glad.c.o.d -o CMakeFiles/snakeGL.dir/src/glad.c.o -c "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/src/glad.c"
 
 CMakeFiles/snakeGL.dir/src/glad.c.i: cmake_force
@@ -86,7 +114,7 @@ CMakeFiles/snakeGL.dir/src/glad.c.s: cmake_force
 CMakeFiles/snakeGL.dir/src/main.cpp.o: CMakeFiles/snakeGL.dir/flags.make
 CMakeFiles/snakeGL.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/snakeGL.dir/src/main.cpp.o: CMakeFiles/snakeGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/snakeGL.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/snakeGL.dir/src/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snakeGL.dir/src/main.cpp.o -MF CMakeFiles/snakeGL.dir/src/main.cpp.o.d -o CMakeFiles/snakeGL.dir/src/main.cpp.o -c "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/src/main.cpp"
 
 CMakeFiles/snakeGL.dir/src/main.cpp.i: cmake_force
@@ -99,18 +127,22 @@ CMakeFiles/snakeGL.dir/src/main.cpp.s: cmake_force
 
 # Object files for target snakeGL
 snakeGL_OBJECTS = \
+"CMakeFiles/snakeGL.dir/src/Program.cpp.o" \
+"CMakeFiles/snakeGL.dir/src/Shader.cpp.o" \
 "CMakeFiles/snakeGL.dir/src/glad.c.o" \
 "CMakeFiles/snakeGL.dir/src/main.cpp.o"
 
 # External object files for target snakeGL
 snakeGL_EXTERNAL_OBJECTS =
 
+snakeGL: CMakeFiles/snakeGL.dir/src/Program.cpp.o
+snakeGL: CMakeFiles/snakeGL.dir/src/Shader.cpp.o
 snakeGL: CMakeFiles/snakeGL.dir/src/glad.c.o
 snakeGL: CMakeFiles/snakeGL.dir/src/main.cpp.o
 snakeGL: CMakeFiles/snakeGL.dir/build.make
 snakeGL: /opt/homebrew/lib/libglfw.3.4.dylib
 snakeGL: CMakeFiles/snakeGL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable snakeGL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Documents/dev projects/snakeGL2.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable snakeGL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/snakeGL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

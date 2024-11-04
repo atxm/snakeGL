@@ -1,18 +1,21 @@
-cmake_minimum_required(VERSION 3.10)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
 
-project(snakeGL)
+PROJECT(snakeGL
+        VERSION 0.0
+        DESCRIPTION "A simple, classic game developed to better my knowledge of C/C++ and the OpenGL API."
+        LANGUAGES   "CXX" "C")
 
-set(INCL_DIR ${PROJECT_BINARY_DIR}/include)
-set(LIB_DIR ${PROJECT_BINARY_DIR}/lib)
+SET(INCL_DIR ${PROJECT_BINARY_DIR}/include)
+SET(LIB_DIR ${PROJECT_BINARY_DIR}/lib)
 
-find_package(glfw3 REQUIRED)
+FIND_PACKAGE(glfw3 REQUIRED)
 
-include_directories(${INCL_DIR})
+INCLUDE_DIRECTORIES(${INCL_DIR})
 
-file(GLOB SOURCES "src/*.cpp" "src/*.c")
+FILE(GLOB SOURCES "src/*.cpp" "src/*.c")
 
-add_executable(snakeGL ${SOURCES})
+ADD_EXECUTABLE(snakeGL ${SOURCES})
 
-link_directories(${PROJECT_BINARY_DIR}/lib)
+LINK_DIRECTORIES(${PROJECT_BINARY_DIR}/lib)
 
-target_link_libraries(snakeGL PRIVATE glfw)
+TARGET_LINK_LIBRARIES(snakeGL PRIVATE glfw)
