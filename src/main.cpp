@@ -4,7 +4,10 @@
 #include <utility>
 #include "Shader.hpp"
 #include "Program.hpp"
+#include "Window.hpp"
 #include "GLFW/glfw3.h"
+
+#define slithering !glfwWindowShouldClose(window->getWindowAddr())
 
 std::string read(const std::string& file);
 
@@ -24,10 +27,10 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    
+    Window* window = new Window("snakeGL — by Atom", 500, 500, WINDOWED);
 
-    GLFWwindow* window = glfwCreateWindow(500, 500, "snakeGL — by Atom", NULL, NULL);
-
-    glfwMakeContextCurrent(window);
+    glfwMakeContextCurrent(window->getWindowAddr());
     gladLoadGL();
     
     unsigned int VBO;
@@ -60,21 +63,21 @@ int main()
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
-    while (!glfwWindowShouldClose(window))
+    while (slithering)
     {
-        if (glfwGetKey(window, GLFW_KEY_UP) || glfwGetKey(window, GLFW_KEY_W)) glClearColor(1.0 / (rand() % 5 + 1), 1.0 / (rand() % 5 + 1), 1.0 / (rand() % 5 + 1), 1.0);
+        if (glfwGetKey(window->getWindowAddr(), GLFW_KEY_UP) || glfwGetKey(window->getWindowAddr(), GLFW_KEY_W)) glClearColor(1.0 / (rand() % 5 + 1), 1.0 / (rand() % 5 + 1), 1.0 / (rand() % 5 + 1), 1.0);
         glClear(GL_COLOR_BUFFER_BIT);
 
         triangleProgram->useProgram();
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
         
-        glfwSwapBuffers(window);
+        glfwSwapBuffers(window->getWindowAddr());
         glfwPollEvents();
     }
 
     delete triangleProgram;
-    glfwDestroyWindow(window);
+    glfwDestroyWindow(window->getWindowAddr());
     glfwTerminate();
 
     return 0;

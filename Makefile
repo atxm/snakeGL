@@ -177,6 +177,30 @@ src/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/src/Shader.cpp.s
 .PHONY : src/Shader.cpp.s
 
+src/Window.o: src/Window.cpp.o
+.PHONY : src/Window.o
+
+# target to build an object file
+src/Window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/src/Window.cpp.o
+.PHONY : src/Window.cpp.o
+
+src/Window.i: src/Window.cpp.i
+.PHONY : src/Window.i
+
+# target to preprocess a source file
+src/Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/src/Window.cpp.i
+.PHONY : src/Window.cpp.i
+
+src/Window.s: src/Window.cpp.s
+.PHONY : src/Window.s
+
+# target to generate assembly for a file
+src/Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snakeGL.dir/build.make CMakeFiles/snakeGL.dir/src/Window.cpp.s
+.PHONY : src/Window.cpp.s
+
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... src/Shader.o"
 	@echo "... src/Shader.i"
 	@echo "... src/Shader.s"
+	@echo "... src/Window.o"
+	@echo "... src/Window.i"
+	@echo "... src/Window.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

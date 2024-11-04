@@ -1,7 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
 
 PROJECT(snakeGL
-        VERSION 0.0
+        VERSION 0.0.0.1
         DESCRIPTION "A simple, classic game developed to better my knowledge of C/C++ and the OpenGL API."
         LANGUAGES   "CXX" "C")
 
