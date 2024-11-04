@@ -14,6 +14,7 @@ class Program
         Program() : programID(glCreateProgram()), vtxShader(nullptr), fmtShader(nullptr), gmtShader(nullptr) {}
         Program(Shader* v, Shader* f);
         inline unsigned getProgramID() { return programID; }
+        inline void useProgram() { glUseProgram(this->programID); }
         inline void attachShader(Shader* shader) { glAttachShader(this->programID, shader->getShaderID()); }
 };
 

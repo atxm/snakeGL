@@ -47,17 +47,6 @@ int main()
     // creating shader program
     Program* triangleProgram = new Program(vtxShader, fmtShader);
 
-    int  programSuccess;
-    char infoLogTres[512];
-
-    glGetProgramiv(triangleProgram->getProgramID(), GL_LINK_STATUS, &programSuccess);
-
-    if (!programSuccess)
-    {
-        glGetProgramInfoLog(triangleProgram->getProgramID(), 512, NULL, infoLogTres);
-        std::cout << "ERROR::PROGRAM::LINKING_FAILED\n" << infoLogTres << std::endl;
-    }
-
     delete vtxShader;
     delete fmtShader;
 
@@ -71,14 +60,12 @@ int main()
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
-    int counter;
-
     while (!glfwWindowShouldClose(window))
     {
         if (glfwGetKey(window, GLFW_KEY_UP) || glfwGetKey(window, GLFW_KEY_W)) glClearColor(1.0 / (rand() % 5 + 1), 1.0 / (rand() % 5 + 1), 1.0 / (rand() % 5 + 1), 1.0);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glUseProgram(triangleProgram->getProgramID());
+        triangleProgram->useProgram();
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
         
