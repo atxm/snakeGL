@@ -13,8 +13,8 @@ int main()
 
     GLfloat vertices[] =
     {
-        -0.5f, -0.5f, -0.5f,
-         0.5f, -0.5f, -0.5f,
+         0.0f, -0.5f,  0.0f,
+         0.5f, -0.5f,  0.0f,
          0.0f,  0.5f,  0.0f
     };
 
@@ -74,6 +74,7 @@ int main()
 
     delete triangleProgram;
     glfwDestroyWindow(window->getWindowAddr());
+    delete window;
     glfwTerminate();
 
     return 0;

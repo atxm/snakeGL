@@ -36,11 +36,6 @@ Window::Window(const char* name, int height, int width, Screen screen)
 	checkIfValidAddr();
 }
 
-void Window::updateClearColor(GLfloat* color)
-{
-	color[0];
-}
-
 const void Window::checkIfValidAddr()
 {
 	if (!window)
