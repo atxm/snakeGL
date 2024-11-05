@@ -28,12 +28,6 @@ int main()
 
     glfwMakeContextCurrent(window->getWindowAddr());
     gladLoadGL();
-    
-    unsigned int VBO;
-
-    glGenBuffers(1, &VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     // vertex shader
     Shader* vtxShader = new Shader(VERTEX, read("src/vertexShader.glsl"));
@@ -53,6 +47,8 @@ int main()
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
 
+    unsigned int VBO;
+    glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
@@ -72,7 +68,7 @@ int main()
         glfwPollEvents();
     }
 
-    delete triangleProgram;
+    //delete triangleProgram;
     glfwDestroyWindow(window->getWindowAddr());
     delete window;
     glfwTerminate();

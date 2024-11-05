@@ -1,6 +1,9 @@
 #include <cstdlib>
 #include "GLFW/glfw3.h"
 
+#ifndef WINDOW_HPP
+#define WINDOW_HPP
+
 enum Screen { FULLSCREEN, WINDOWED };
 
 class Window {
@@ -17,3 +20,5 @@ class Window {
 		GLFWwindow* getWindowAddr() { return this->window; }
 
 };
+
+#endif
