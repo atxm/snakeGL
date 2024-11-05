@@ -1,11 +1,7 @@
 #include <fstream>
-#include <chrono>
-#include <stdlib.h>
-#include <utility>
 #include "Shader.hpp"
 #include "Program.hpp"
 #include "Window.hpp"
-#include "GLFW/glfw3.h"
 
 #define slithering !glfwWindowShouldClose(window->getWindowAddr())
 
@@ -28,7 +24,7 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     
-    Window* window = new Window("snakeGL — by Atom", 500, 500, WINDOWED);
+    Window* window = new Window("snakeGL — atom", 500, 500, WINDOWED);
 
     glfwMakeContextCurrent(window->getWindowAddr());
     gladLoadGL();
