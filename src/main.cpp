@@ -1,6 +1,6 @@
 #include <fstream>
-#include "Shader.hpp"
 #include "Program.hpp"
+#include "Shader.hpp"
 #include "Window.hpp"
 
 #define slithering !glfwWindowShouldClose(window->getWindowAddr())
@@ -10,12 +10,12 @@ std::string read(const std::string& file);
 int main()
 {
     srand(time(0));
-
+    
     GLfloat vertices[] =
     {
-         0.0f, -0.5f,  0.0f,
-         0.5f, -0.5f,  0.0f,
-         0.0f,  0.5f,  0.0f
+         0.5f,  0.5f, 0.0f,  // top right
+         0.5f, -0.5f, 0.0f,  // bottom right
+        -0.5f,  0.5f, 0.0f,  // top left 
     };
 
     if (!glfwInit()) return -1;
@@ -30,11 +30,11 @@ int main()
     gladLoadGL();
 
     // vertex shader
-    Shader* vtxShader = new Shader(VERTEX, read("src/vertexShader.glsl"));
+    Shader* vtxShader = new Shader(VERTEX, read("../src/vertexShader.glsl"));
     vtxShader->initializeShader();
 
     // fragment shader
-    Shader* fmtShader = new Shader(FRAGMENT, read("src/fragmentShader.glsl"));
+    Shader* fmtShader = new Shader(FRAGMENT, read("../src/fragmentShader.glsl"));
     fmtShader->initializeShader();
 
     // creating shader program

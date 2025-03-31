@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <string>
 #include "GLFW/glfw3.h"
 
 #ifndef WINDOW_HPP
