@@ -24,7 +24,7 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     
-    Window* window = new Window("snakeGL — atom", 500, 500, WINDOWED);
+    Window* window = new Window("snakeGL — atom", 500, 500, FULLSCREEN);
 
     glfwMakeContextCurrent(window->getWindowAddr());
     gladLoadGL();
@@ -68,7 +68,7 @@ int main()
         glfwPollEvents();
     }
 
-    //delete triangleProgram;
+    delete triangleProgram;
     glfwDestroyWindow(window->getWindowAddr());
     delete window;
     glfwTerminate();
